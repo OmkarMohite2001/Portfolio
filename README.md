@@ -23,7 +23,10 @@ Personal portfolio website for Omkar Mohite, a Full Stack Developer focused on A
 - [PLC Integration Service](https://github.com/OmkarMohite2001/CISPL_PLC_SERVICE)
 - [USB Printer Management UI](https://github.com/OmkarMohite2001/UsbToPrinterNetAngular)
 - [TSC Printer UI](https://github.com/OmkarMohite2001/TscUiSample)
-- [KBL Role-Based Access Control UI](https://github.com/OmkarMohite2001/KBL_RBAC_UI)
+- [KBL RouteCard Management](https://github.com/OmkarMohite2001/kbl-28-04-26)
+- [KBL DRC – Display Result Capture](https://github.com/OmkarMohite2001/DisplayTestingSoftware)
+- [KBL RBAC UI](https://github.com/OmkarMohite2001/KBL_RBAC_UI)
+- [KBL RBAC Updated UI](https://github.com/OmkarMohite2001/RBAC-TEMP-02-06-26)
 - [Car Rental Management API](https://github.com/OmkarMohite2001/CarManaagementApi)
 - [Angular Local Storage CRUD](https://github.com/OmkarMohite2001/angular-19-localstorage-crud)
 
