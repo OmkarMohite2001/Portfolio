@@ -63,3 +63,24 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll("[data-reveal]").forEach(function (element) { element.classList.add("revealed"); });
   }
 });
+
+/* Pointer depth on featured work: disabled for touch and reduced-motion users. */
+document.addEventListener("DOMContentLoaded", function () {
+  const reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const finePointer = window.matchMedia && window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  if (reducedMotion || !finePointer) return;
+
+  document.querySelectorAll(".project-card").forEach(function (card) {
+    card.addEventListener("pointermove", function (event) {
+      const bounds = card.getBoundingClientRect();
+      const x = (event.clientX - bounds.left) / bounds.width;
+      const y = (event.clientY - bounds.top) / bounds.height;
+      const rotateY = (x - 0.5) * 2.2;
+      const rotateX = (0.5 - y) * 2.2;
+      card.style.transform = "perspective(900px) rotateX(" + rotateX.toFixed(2) + "deg) rotateY(" + rotateY.toFixed(2) + "deg) translateY(-4px)";
+    });
+    card.addEventListener("pointerleave", function () {
+      card.style.transform = "";
+    });
+  });
+});
