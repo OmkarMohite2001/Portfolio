@@ -131,3 +131,55 @@
 .preview-drc .preview-chart i{background:linear-gradient(180deg,#f0bd70,#de875c)}.preview-vision .preview-chart i:nth-child(3n){background:linear-gradient(180deg,#f0bd70,#de875c)}
 .preview-plc .preview-metrics i{background:linear-gradient(135deg,rgba(79,221,168,.32),rgba(79,221,168,.08))}.preview-production .preview-chart i{background:linear-gradient(180deg,#a78bfa,#6d7df0)}
 @media(max-width:760px){.project-preview{left:10%;right:10%;top:15%;bottom:13%}}@media(prefers-reduced-motion:reduce){.project-preview{transition:none!important}}
+
+
+/* Six coordinated AI-generated project concept screens */
+.project-visual.has-generated-preview {
+  display: block;
+  position: relative;
+  min-height: 250px;
+  padding: 0;
+  overflow: hidden;
+  background-color: #081322;
+  background-image: url("./assets/images/project-preview-sprite.webp");
+  background-repeat: no-repeat;
+  background-size: 300% 200%;
+  border-bottom: 1px solid rgba(255,255,255,.07);
+}
+.project-visual.has-generated-preview::before { display: none; }
+.project-visual.preview-piaggio { background-position: 0 0; }
+.project-visual.preview-production { background-position: 50% 0; }
+.project-visual.preview-routecard { background-position: 100% 0; }
+.project-visual.preview-drc { background-position: 0 100%; }
+.project-visual.preview-rbac { background-position: 50% 100%; }
+.project-visual.preview-cognex { background-position: 100% 100%; }
+.preview-image-badge {
+  position: absolute;
+  left: 11px;
+  bottom: 10px;
+  z-index: 2;
+  padding: 4px 7px;
+  border: 1px solid rgba(160,205,235,.2);
+  border-radius: 5px;
+  background: rgba(5,12,22,.78);
+  color: #a9c8e8;
+  font: 8px var(--mono);
+  letter-spacing: .08em;
+  pointer-events: none;
+}
+.project-card:nth-child(1) .project-visual.has-generated-preview,
+.project-card:nth-child(8) .project-visual.has-generated-preview,
+.project-card:nth-child(11) .project-visual.has-generated-preview {
+  min-height: 100%;
+  border-right: 1px solid rgba(255,255,255,.07);
+  border-bottom: 0;
+}
+@media (max-width: 760px) {
+  .project-visual.has-generated-preview { min-height: 220px; }
+}
+@media (max-width: 420px) {
+  .project-visual.has-generated-preview { min-height: 225px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .project-visual.has-generated-preview { animation: none !important; }
+}
