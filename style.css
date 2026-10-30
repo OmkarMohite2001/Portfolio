@@ -113,3 +113,21 @@
   .profile-card, .visual-orbit, .floating-tag, .project-visual::before { animation: none !important; }
   .project-card, .focus-card, .skill-panel, .education-card, .timeline-content { transition: none !important; }
 }
+
+
+/* Hand-crafted project UI illustrations — explicitly concept previews, not screenshots */
+.project-preview{position:absolute;z-index:1;left:12%;right:12%;top:17%;bottom:15%;border:1px solid rgba(255,255,255,.2);border-radius:10px;overflow:hidden;background:linear-gradient(145deg,rgba(18,31,54,.98),rgba(8,15,28,.98));box-shadow:0 16px 36px rgba(0,0,0,.28);transform:perspective(800px) rotateY(-8deg) rotateX(3deg);transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s ease}
+.project-card:hover .project-preview{transform:perspective(800px) rotateY(0) rotateX(0) translateY(-3px);box-shadow:0 22px 42px rgba(0,0,0,.36)}
+.preview-top{height:22px;display:flex;align-items:center;gap:4px;padding:0 8px;background:rgba(255,255,255,.055);border-bottom:1px solid rgba(255,255,255,.08)}
+.preview-top i{width:4px;height:4px;border-radius:50%;background:#6e91b8}.preview-top b{margin-left:auto;font-size:6px;letter-spacing:.12em;color:#a9c3df;font-weight:600}
+.preview-content{display:flex;height:calc(100% - 22px);padding:8px;gap:8px}.preview-side{width:14%;border-radius:4px;background:linear-gradient(180deg,rgba(115,151,255,.42),rgba(115,151,255,.05))}
+.preview-main{flex:1;display:flex;flex-direction:column;gap:7px}.preview-heading{height:8px;width:43%;border-radius:3px;background:rgba(220,236,255,.8)}
+.preview-metrics{display:flex;gap:5px;height:23%}.preview-metrics i{flex:1;border-radius:4px;background:linear-gradient(135deg,rgba(96,161,255,.35),rgba(93,224,199,.12));border:1px solid rgba(143,187,255,.2)}
+.preview-chart{display:flex;align-items:end;gap:4px;flex:1;padding:5px;border-radius:5px;background:rgba(255,255,255,.035)}.preview-chart i{flex:1;height:var(--bar,45%);border-radius:2px 2px 0 0;background:linear-gradient(180deg,#72d8d0,#688cf2)}
+.preview-chart i:nth-child(2n){--bar:70%}.preview-chart i:nth-child(3n){--bar:35%}.preview-chart i:nth-child(4n){--bar:86%}
+.preview-rows{display:flex;flex-direction:column;gap:4px}.preview-rows i{height:4px;border-radius:3px;background:rgba(210,228,250,.16)}.preview-rows i:nth-child(2){width:78%}.preview-rows i:nth-child(3){width:88%}
+.preview-note{position:absolute;right:8px;bottom:6px;font-size:5px;letter-spacing:.14em;color:rgba(218,232,255,.55)}
+.preview-routecard .preview-chart i,.preview-rbac .preview-chart i{height:5px!important;align-self:stretch;border-radius:2px;background:rgba(116,169,255,.35)}
+.preview-drc .preview-chart i{background:linear-gradient(180deg,#f0bd70,#de875c)}.preview-vision .preview-chart i:nth-child(3n){background:linear-gradient(180deg,#f0bd70,#de875c)}
+.preview-plc .preview-metrics i{background:linear-gradient(135deg,rgba(79,221,168,.32),rgba(79,221,168,.08))}.preview-production .preview-chart i{background:linear-gradient(180deg,#a78bfa,#6d7df0)}
+@media(max-width:760px){.project-preview{left:10%;right:10%;top:15%;bottom:13%}}@media(prefers-reduced-motion:reduce){.project-preview{transition:none!important}}
